@@ -7,7 +7,7 @@ import json
 import re
 
 REPLY_ENDPOINT = 'https://api.line.me/v2/bot/message/reply'
-ACCESS_TOKEN = '6SbncqMyX6Q6PqUFulq8qeUMEgQPvs2pQzLxIi6v7Gy/l2mtg3ziW958dn+0mkSvrpld5p9hA7KxDIM9egsE3pXl7YZnxq8JirkP9oOXkUvBWP+0nZsDauLC5wUgHeWZUL1wdB04t89/1O/w1cDnyilFU='
+ACCESS_TOKEN = '6SbncqMyX6Q6PqUFulqHV8qeUMEgQPvs2pQzLxIi6v7Gy/l2mtg3ziW958dn+0mkSvrpld5p9hA7Kbg1hchw5dHwUNMxDIM9egsE3pXl7YZnxq8JirkP9oOXkUvBWP+0nXrZsDauLC5wUgHeWZUL1wdB04t89/1O/w1cDnyilFU='
 HEADER = {
     "Content-Type": "application/json",
     "Authorization": "Bearer " + ACCESS_TOKEN
@@ -61,4 +61,3 @@ def callback(request):
             text = e['message']['text'] # 受信メッセージの取得
             reply_text(reply_token, id,text) # LINEにセリフを送信する関数
     return HttpResponse("reply") # テスト用
-    
